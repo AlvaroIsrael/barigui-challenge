@@ -1,0 +1,78 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" [value]="service.formData.id">
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="name.valid"
+             [class.red-icon]="name.invalid && name.touched"></i>
+        </div>
+      </div>
+      <input name="name" #name="ngModel" [(ngModel)]="service.formData.name" class="form-control"
+             placeholder="Costumer Name" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="far fa-id-card" [class.green-icon]="document.valid"
+             [class.red-icon]="document.invalid && document.touched"></i>
+        </div>
+      </div>
+      <input name="document" #document="ngModel" [(ngModel)]="service.formData.document"
+             class="form-control" placeholder="11 Digit Document" required maxlength="11" minlength="11">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-truck-pickup" [class.green-icon]="carModel.valid"
+             [class.red-icon]="carModel.invalid && carModel.touched"></i>
+        </div>
+      </div>
+      <input name="carModel" #carModel="ngModel" [(ngModel)]="service.formData.carModel" class="form-control"
+             placeholder="Car Model" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-7">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fa fa-car" [class.green-icon]="carPlate.valid"
+               [class.red-icon]="carPlate.invalid && carPlate.touched"></i>
+          </div>
+        </div>
+        <input name="carPlate" #carPlate="ngModel" [(ngModel)]="service.formData.carPlate" class="form-control"
+               placeholder="XXX-YYYY" required maxlength="8" minlength="8">
+      </div>
+    </div>
+
+    <div class="form-group col-md-5">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-calendar-day" [class.green-icon]="carYear.valid"
+               [class.red-icon]="carYear.invalid && carYear.touched"></i>
+          </div>
+        </div>
+        <input name="carYear" #carYear="ngModel" [(ngModel)]="service.formData.carYear" class="form-control"
+               placeholder="Model Year"
+               required maxlength="4" minlength="4">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i
+      class="fas fa-database"></i> Submit
+    </button>
+  </div>
+</form>
