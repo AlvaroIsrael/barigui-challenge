@@ -18,4 +18,4 @@ Since the document did not specify the data structre I just mocked some data usi
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### :memo: Licence
-This is under GNU GENERAL PUBLIC license. See [LICENSE](../LICENSE) for more details.
+This is under GNU GENERAL PUBLIC license. See [LICENSE](../LICENSE.md) for more details.
