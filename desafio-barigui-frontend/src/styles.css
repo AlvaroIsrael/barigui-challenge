@@ -1,0 +1,55 @@
+
+body {
+  font: 400 14px Robot, sans-serif;
+  background: #f0f0f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-weight: bold !important;
+  color: #75C089;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #dc3545;
+}
+
+input.ng-valid {
+  border-color: #28a745;
+}
+
+.green-icon {
+  color: #28a745;
+}
+
+.red-icon {
+  color: #dc3545;
+}
+
+#toast-container > div {
+  opacity: 1;
+}
+
+table tr:hover {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.ant-empty-image {
+  width: 0;
+  height: 0;
+}
+
+nz-embed-empty {
+  width: 0;
+  height: 0;
+}
+
+.ant-empty-description {
+  width: 0;
+  height: 0;
+  display: none;
+}
