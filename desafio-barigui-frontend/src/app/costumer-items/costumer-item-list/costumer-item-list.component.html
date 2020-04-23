@@ -1,0 +1,23 @@
+<nz-table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Document</th>
+    <th>Car Model</th>
+    <th>Car Plate</th>
+    <th>Model Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pd of service.list">
+    <td (click)="populateForm(pd)">{{pd.name}}</td>
+    <td (click)="populateForm(pd)">{{pd.document}}</td>
+    <td (click)="populateForm(pd)">{{pd.carModel}}</td>
+    <td (click)="populateForm(pd)">{{pd.carPlate}}</td>
+    <td (click)="populateForm(pd)">{{pd.carYear}}</td>
+    <td>
+      <i class="fa fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.id)"></i>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>
